@@ -1,464 +1,400 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Арина Филатова — Business/System Analyst и Project Manager. B2B, процессы, требования, интеграции, результат." />
-  <title>Арина Филатова — Business / System Analyst</title>
+  <meta name="description" content="Арина Филатова — Project Manager (B2B / IT / Digital). Управление сроками, рисками, бюджетом и командой." />
+  <title>Арина Филатова — Project Manager</title>
+
   <style>
-    :root {
-      --bg: #0f0f14;
-      --card: #16161f;
-      --text: #eaeaf0;
-      --muted: #b6b6c7;
+    :root{
+      --bg:#0f0f14;
+      --card:#16161f;
+      --text:#eaeaf0;
+      --muted:#b6b6c7;
       --muted2:#9a9ab0;
-      --line: #222233;
+      --line:#222233;
       --accent:#7aa2ff;
       --accent2:#2ee59d;
-      --radius: 16px;
-      --max: 980px;
+      --radius:16px;
+      --max:980px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+      background:
+        radial-gradient(900px 500px at 20% -10%, rgba(122,162,255,.18), transparent 60%),
+        radial-gradient(700px 420px at 90% 10%, rgba(46,229,157,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .container{ max-width:var(--max); margin:0 auto; padding:64px 24px; }
+
+    header{
+      margin-bottom:56px;
+      padding:28px;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:24px;
+    }
+    .top{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
     }
 
-```
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-  background: radial-gradient(900px 500px at 20% -10%, rgba(122,162,255,.18), transparent 60%),
-              radial-gradient(700px 420px at 90% 10%, rgba(46,229,157,.10), transparent 60%),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+    .heroRow{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+    .photoWrap{
+      width:88px;
+      height:88px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      flex: 0 0 auto;
+    }
+    .photoWrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 64px 24px;
-}
+    h1{ font-size:42px; margin:0; letter-spacing:-0.5px; }
+    .subtitle{ font-size:18px; color:var(--muted); margin:0; }
 
-header {
-  margin-bottom: 56px;
-  padding: 28px;
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-  border: 1px solid rgba(255,255,255,.06);
-  border-radius: 24px;
-}
+    .badges{ display:flex; flex-wrap:wrap; gap:10px; margin-top:6px; }
+    .badge{
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(0,0,0,.15);
+      padding:7px 10px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:50%;
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow:0 0 0 3px rgba(122,162,255,.12);
+    }
 
-.top {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-}
+    .links{ display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:600;
+      font-size:14px;
+      white-space:nowrap;
+    }
+    .btn.primary{
+      border-color:rgba(122,162,255,.55);
+      background:linear-gradient(135deg, rgba(122,162,255,.28), rgba(46,229,157,.14));
+    }
+    .btn.secondary{ color:var(--muted); font-weight:600; }
 
-h1 {
-  font-size: 42px;
-  margin: 0;
-  letter-spacing: -0.5px;
-}
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px 18px;
+      margin-top:8px;
+      color:var(--muted);
+      font-size:14px;
+    }
 
-.subtitle {
-  font-size: 18px;
-  color: var(--muted);
-  margin: 0;
-}
+    h2{
+      font-size:26px;
+      margin-top:56px;
+      margin-bottom:14px;
+      letter-spacing:-0.2px;
+    }
+    h3{ font-size:16px; margin:0 0 10px; letter-spacing:0.1px; }
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 4px;
-}
+    .section{ margin-bottom:26px; }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; }
 
-.badge {
-  font-size: 13px;
-  color: var(--muted);
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(0,0,0,.15);
-  padding: 7px 10px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
+    .card{
+      background:rgba(22,22,31,.80);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius);
+      padding:18px;
+    }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow: 0 0 0 3px rgba(122,162,255,.12);
-}
+    ul{ padding-left:18px; margin:0; }
+    li{ margin-bottom:8px; color:var(--muted); }
 
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 8px;
-}
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .chip{
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.10);
+      padding:6px 10px;
+      border-radius:999px;
+    }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
-  color: var(--text);
-  font-weight: 600;
-  font-size: 14px;
-}
+    .role{ display:flex; flex-direction:column; gap:6px; }
+    .role .lineRow{
+      display:flex; flex-wrap:wrap; gap:8px; align-items:baseline;
+    }
+    .role b{ color:var(--text); font-size:15px; }
+    .role span{ color:var(--muted2); font-size:13px; }
+    .small{ color:var(--muted2); font-size:13px; }
 
-.btn.primary {
-  border-color: rgba(122,162,255,.55);
-  background: linear-gradient(135deg, rgba(122,162,255,.28), rgba(46,229,157,.14));
-}
+    footer{
+      margin-top:56px;
+      border-top:1px solid var(--line);
+      padding-top:20px;
+      color:var(--muted2);
+      font-size:14px;
+    }
 
-.btn.secondary { color: var(--muted); font-weight: 600; }
-
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 18px;
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-h2 {
-  font-size: 26px;
-  margin-top: 56px;
-  margin-bottom: 14px;
-  letter-spacing: -0.2px;
-}
-
-h3 {
-  font-size: 16px;
-  margin: 0 0 10px;
-  letter-spacing: 0.1px;
-}
-
-.section { margin-bottom: 26px; }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-}
-
-.card {
-  background: rgba(22,22,31,.80);
-  border: 1px solid rgba(255,255,255,.06);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-
-ul { padding-left: 18px; margin: 0; }
-li { margin-bottom: 8px; color: var(--muted); }
-
-.kpi {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.chip {
-  font-size: 13px;
-  color: var(--muted);
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.10);
-  padding: 6px 10px;
-  border-radius: 999px;
-}
-
-.role {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.role .line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: baseline;
-}
-
-.role b { color: var(--text); font-size: 15px; }
-.role span { color: var(--muted2); font-size: 13px; }
-
-.small { color: var(--muted2); font-size: 13px; }
-
-footer {
-  margin-top: 56px;
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
-  color: var(--muted2);
-  font-size: 14px;
-}
-
-@media (max-width: 600px) {
-  h1 { font-size: 32px; }
-  h2 { font-size: 22px; }
-  header { padding: 20px; }
-}
-```
-
+    @media (max-width: 600px){
+      h1{ font-size:32px; }
+      h2{ font-size:22px; }
+      header{ padding:20px; }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="top">
-        <div>
-          <h1>Арина Филатова</h1>
-          <p class="subtitle">Business / System Analyst · Project Manager (B2B, IT / Digital)</p>
-          <div class="badges">
-            <span class="badge"><span class="dot"></span>B2B</span>
-            <span class="badge">процессы</span>
-            <span class="badge">требования</span>
-            <span class="badge">интеграции (REST API)</span>
-            <span class="badge">прозрачность и результат</span>
+        <div class="heroRow">
+          <!-- ФОТО: положи файл photo.jpg рядом с index.html -->
+          <div class="photoWrap">
+            <img src="photo.jpg" alt="Арина Филатова" />
+          </div>
+
+          <div>
+            <h1>Арина Филатова</h1>
+            <p class="subtitle">Project Manager (B2B / IT / Digital)</p>
+
+            <div class="badges">
+              <span class="badge"><span class="dot"></span>B2B</span>
+              <span class="badge">сроки</span>
+              <span class="badge">бюджет</span>
+              <span class="badge">риски</span>
+              <span class="badge">стейкхолдеры</span>
+              <span class="badge">команда</span>
+            </div>
           </div>
         </div>
 
-```
-    <div class="links">
-      <!-- ЗАМЕНИ ССЫЛКИ: CV.pdf и LinkedIn -->
-      <a class="btn primary" href="CV.pdf" target="_blank" rel="noopener">Резюме (PDF)</a>
-      <a class="btn" href="https://hh.ru" target="_blank" rel="noopener">hh.ru</a>
-      <a class="btn" href="mailto:arina.filatova.2014@bk.ru">Email</a>
-      <a class="btn secondary" href="https://t.me/arina_filatova_07" target="_blank" rel="noopener">Telegram</a>
-    </div>
+        <div class="links">
+          <!-- PDF: положи файл CV.pdf рядом с index.html -->
+          <a class="btn primary" href="CV.pdf" target="_blank" rel="noopener">Резюме (PDF)</a>
 
-    <div class="meta">
-      <span>Москва · готова к переезду и командировкам</span>
-      <span>Английский: B1</span>
-      <!-- Если хочешь скрыть телефон на публичной версии — просто удали следующую строку -->
-      <span>Тел.: +7 (985) 616-17-95</span>
-    </div>
-  </div>
-</header>
+          <!-- HH: твоя прямая ссылка -->
+          <a class="btn" href="https://nn.hh.ru/resume/7755862cff0d55146b0039ed1f50616a743972" target="_blank" rel="noopener">hh.ru</a>
 
-<section class="section" id="about">
-  <h2>Кратко</h2>
-  <div class="card">
-    <p style="margin:0; color: var(--muted);">
-      У меня 3+ года опыта в управлении проектами (B2B, IT / Digital, event-проекты) и сильная база в процессах,
-      коммуникациях и документации. Сейчас целюсь в роли Business / System Analyst: хочу больше фокуса на требования,
-      интеграции и формализацию решений.
-    </p>
-  </div>
-</section>
+          <a class="btn" href="mailto:arina.filatova.2014@bk.ru">Email</a>
+          <a class="btn secondary" href="https://t.me/arina_filatova_07" target="_blank" rel="noopener">Telegram</a>
+        </div>
 
-<section class="section" id="value">
-  <h2>Чем я полезна</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Для бизнеса</h3>
-      <ul>
-        <li>Перевожу цели в понятные требования и критерии результата</li>
-        <li>Снижаю риски: фиксирую договорённости, держу контрольные точки</li>
-        <li>Удерживаю сроки и качество при изменениях и высокой неопределённости</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Для команды</h3>
-      <ul>
-        <li>Строю прозрачную коммуникацию и единый контекст по задачам</li>
-        <li>Пишу документацию и упрощаю передачу знаний</li>
-        <li>Мотивирую через понятные цели, обратную связь и обучение</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Для продукта / проекта</h3>
-      <ul>
-        <li>Планирование, трекинг статусов, управление зависимостями</li>
-        <li>Работа с метриками, бюджетами, коммерческими предложениями</li>
-        <li>Понимание REST API и интеграций (на уровне системного анализа)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="skills">
-  <h2>Компетенции и инструменты</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Business / System Analysis</h3>
-      <ul>
-        <li>Сбор и формализация требований (use cases / user stories)</li>
-        <li>BPMN / описание процессов</li>
-        <li>REST API, интеграции (межсервисное взаимодействие)</li>
-        <li>ТЗ и аналитическая документация</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Project Management</h3>
-      <ul>
-        <li>End-to-end ведение проектов, контроль сроков/качества/бюджета</li>
-        <li>Работа со стейкхолдерами и подрядчиками</li>
-        <li>Управление рисками и изменениями</li>
-        <li>Jira / Trello, отчётность, статус-репорты</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Data / Productivity</h3>
-      <ul>
-        <li>SQL (база) · Python (база) · работа с метриками</li>
-        <li>MS Excel / PowerPoint / Word</li>
-        <li>Документация, чек-листы, трекеры</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="kpi">
-    <span class="chip">Jira</span>
-    <span class="chip">Trello</span>
-    <span class="chip">BPMN</span>
-    <span class="chip">REST API</span>
-    <span class="chip">SQL</span>
-    <span class="chip">Python</span>
-    <span class="chip">MS Excel</span>
-    <span class="chip">Документация</span>
-    <span class="chip">Риски</span>
-  </div>
-</section>
-
-<section class="section" id="cases">
-  <h2>Кейсы</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>4 проекта за неделю: координация и логистика</h3>
-      <p style="margin:0; color: var(--muted);">
-        За одну неделю координировала 4 клиентских проекта параллельно: команды, креатив и застройка.
-        В одном проекте выстроила сложную логистику: участники из 3 аэропортов и 2 вокзалов,
-        команда из 5 координаторов. Проекты реализованы в срок.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Проект пошёл не по плану: ответственность и переговоры</h3>
-      <p style="margin:0; color: var(--muted);">
-        Неверно интерпретировала сообщение менеджера площадки — возник риск увеличения предоплаты и срыва сроков.
-        Взяла ответственность: оперативно приехала, прояснила договорённости, извинилась и договорилась о решении.
-        Итог: проект успешно реализован. Вывод: фиксирую и перепроверяю ключевые договорённости.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Управление рисками и стабильное качество</h3>
-      <p style="margin:0; color: var(--muted);">
-        Всегда заранее держу альтернативы (резервные подрядчики), регулярно синхронизирую прогресс с клиентом,
-        веду таблицы и задачи, чтобы не терять детали. Это помогает удерживать сроки и качество при изменениях.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="experience">
-  <h2>Опыт</h2>
-  <div class="grid">
-    <div class="card role">
-      <div class="line">
-        <b>Imagency — Project Manager</b>
-        <span>07/2024 – 09/2025</span>
+        <div class="meta">
+          <span>Москва · готова к переезду и командировкам</span>
+          <span>Английский: B1</span>
+          <span>Тел.: +7 (985) 616-17-95</span>
+        </div>
       </div>
-      <ul>
-        <li>Планирование и контроль сроков, бюджета и качества</li>
-        <li>Работа с подрядчиками и кросс-функциональными командами (креатив, продакшн, финансы)</li>
-        <li>Анализ и сравнение коммерческих предложений, участие в принятии решений</li>
-        <li>Бюджетирование и документация, ведение проекта на всех этапах</li>
-      </ul>
-      <div class="kpi">
-        <span class="chip">Запуск за 1 неделю</span>
-        <span class="chip">Маржинальность 30–40% (до 70–90%)</span>
-        <span class="chip">Обучающие видео для онбординга</span>
+    </header>
+
+    <section class="section" id="about">
+      <h2>Кратко</h2>
+      <div class="card">
+        <p style="margin:0; color:var(--muted);">
+          Project Manager с опытом B2B-проектов и сильной базой в планировании, контроле сроков и бюджета, работе с подрядчиками и стейкхолдерами.
+          Выстраиваю системную и прозрачную работу команды: фиксирую договорённости, держу контрольные точки, принимаю решения на основе целей и данных, довожу проекты до результата даже в условиях неопределённости.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div class="card role">
-      <div class="line">
-        <b>ABD:Entertainment — Project Manager</b>
-        <span>06/2023 – 06/2024</span>
+    <section class="section" id="value">
+      <h2>Чем я полезна</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Управление проектом</h3>
+          <ul>
+            <li>Планирую сроки и ресурсы, веду трекинг статусов и зависимостей</li>
+            <li>Контролирую бюджет и финансовую дисциплину (сметы, согласования, закупки)</li>
+            <li>Управляю изменениями: фиксирую договорённости и переформатирую план без потери качества</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Коммуникации и команда</h3>
+          <ul>
+            <li>Единый контекст для команды и стейкхолдеров, понятный статус-репорт</li>
+            <li>Координация нескольких подрядчиков и кросс-функциональных ролей</li>
+            <li>Мотивация через чёткие цели, обратную связь и обучение (делала онбординг-материалы)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Риски и качество</h3>
+          <ul>
+            <li>Заранее держу альтернативы и резервы, чтобы не срывать сроки</li>
+            <li>Контроль качества через чек-листы и промежуточные согласования</li>
+            <li>Работаю быстро и аккуратно с документами/цифрами (сметы, КП, бюджеты)</li>
+          </ul>
+        </div>
       </div>
-      <ul>
-        <li>Планирование, контроль качества и сроков, управление ресурсами</li>
-        <li>Поиск подрядчиков и выбор по КП</li>
-        <li>Сметы, документация, контроль исполнения работ</li>
-      </ul>
-      <div class="kpi">
-        <span class="chip">Выездные проекты</span>
-        <span class="chip">Полная застройка</span>
-        <span class="chip">Крупные корпоративные клиенты</span>
+
+      <div class="chips">
+        <span class="chip">Jira</span>
+        <span class="chip">Trello</span>
+        <span class="chip">MS Office</span>
+        <span class="chip">Google Docs/Sheets</span>
+        <span class="chip">CRM</span>
+        <span class="chip">1C</span>
+        <span class="chip">Бюджетирование</span>
+        <span class="chip">Стейкхолдер-менеджмент</span>
+        <span class="chip">Риск-менеджмент</span>
       </div>
-    </div>
+    </section>
 
-    <div class="card role">
-      <div class="line">
-        <b>ЭВРИКА — Ассистент менеджера по продажам</b>
-        <span>10/2021 – 04/2022</span>
+    <section class="section" id="cases">
+      <h2>Кейсы</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>4 клиента параллельно за 1 неделю</h3>
+          <p style="margin:0; color:var(--muted);">
+            Вела 4 клиентских проекта одновременно в сжатые сроки: синхронизировала запросы, согласования, креатив и застройку,
+            распределяла задачи и контрольные точки. Итог — все проекты реализованы в срок и без потери качества коммуникаций.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Сложная логистика и управление командой</h3>
+          <p style="margin:0; color:var(--muted);">
+            Организовала логистику проекта с несколькими точками прибытия: 3 аэропорта, 2 вокзала.
+            Координировала команду из 5 координаторов, выстроила план перемещений и контроль по времени.
+            Итог — процесс прошёл без сбоев, участники приехали вовремя.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Бюджетирование на 13 городов — быстро и точно</h3>
+          <p style="margin:0; color:var(--muted);">
+            Оперативно собирала и сводила бюджеты под проект на 13 городов: структура, сметы, проверка вводных, согласование.
+            Ко мне обращались, когда нужно «собрать быстро», потому что я держу темп и точность в цифрах и документах.
+          </p>
+        </div>
       </div>
-      <ul>
-        <li>Клиентская база, договорная документация, контроль обязательств</li>
-        <li>Коммуникация по условиям поставок, поддержка менеджеров</li>
-        <li>Участие в подготовке и выигрыше 2 аукционов по 223-ФЗ</li>
-      </ul>
-    </div>
-  </div>
+    </section>
 
-  <p class="small" style="margin-top:10px;">
-    Дополнительно: проектная деятельность и стажировки (Project Assistant), работа с документацией и координацией.
-  </p>
-</section>
+    <section class="section" id="experience">
+      <h2>Опыт</h2>
+      <div class="grid">
+        <div class="card role">
+          <div class="lineRow">
+            <b>Imagency — Project Manager</b>
+            <span>07/2024 – 09/2025</span>
+          </div>
+          <ul>
+            <li>Ведение проектов end-to-end: план, бюджет, сроки, подрядчики, качество, отчётность</li>
+            <li>Коммуникация со стейкхолдерами: статус-репорты, согласования, контроль ожиданий</li>
+            <li>Финансовая часть: сметы, сравнение коммерческих предложений, контроль затрат</li>
+            <li>Процессность: чек-листы, регламенты, материалы для онбординга</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">+10 процентных пунктов к плановой прибыли</span>
+            <span class="chip">Сроки и контрольные точки</span>
+            <span class="chip">Работа с подрядчиками</span>
+          </div>
+          <p class="small" style="margin:10px 0 0;">
+            Использую процентные пункты, потому что сравниваю фактическую прибыль с плановой в процентах — здесь корректна абсолютная разница.
+          </p>
+        </div>
 
-<section class="section" id="education">
-  <h2>Образование и обучение</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>НИУ ВШЭ — бакалавр (2018–2022)</h3>
-      <p style="margin:0; color: var(--muted);">Управление бизнесом</p>
-    </div>
-    <div class="card">
-      <h3>Курсы (2025–2026)</h3>
-      <ul>
-        <li>Skillbox: Управление проектами</li>
-        <li>Skillbox: Управление командами 2.0</li>
-        <li>Stepik: Python для начинающих</li>
-        <li>Data-аналитика: Python и SQL в анализе (нац. проект «Кадры»)</li>
-        <li>Aston: «Системный аналитик с нуля» (UML/BPMN, требования, методологии)</li>
-      </ul>
-    </div>
-  </div>
-</section>
+        <div class="card role">
+          <div class="lineRow">
+            <b>ABD:Entertainment — Project Manager</b>
+            <span>06/2023 – 06/2024</span>
+          </div>
+          <ul>
+            <li>Планирование, контроль сроков/качества, управление ресурсами и подрядчиками</li>
+            <li>Сметы и документация, координация поставок и выполнения работ</li>
+            <li>Работа в условиях параллельных задач и высокой динамики</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Кросс-функциональная координация</span>
+            <span class="chip">Сметы и контроль затрат</span>
+          </div>
+        </div>
 
-<section class="section" id="contact">
-  <h2>Контакты</h2>
-  <div class="card">
-    <p style="margin:0 0 12px; color: var(--muted);">Если вам удобнее — напишите в Telegram. Резюме по кнопке сверху.</p>
-    <div class="links" style="margin-top:0;">
-      <a class="btn primary" href="mailto:arina.filatova.2014@bk.ru">arina.filatova.2014@bk.ru</a>
-      <a class="btn" href="https://t.me/arina_filatova_07" target="_blank" rel="noopener">@arina_filatova_07</a>
-      <a class="btn secondary" href="https://hh.ru" target="_blank" rel="noopener">hh.ru</a>
-    </div>
-    <p class="small" style="margin:12px 0 0;">Москва · готова к переезду · готова к командировкам</p>
-  </div>
-</section>
+        <div class="card role">
+          <div class="lineRow">
+            <b>ЭВРИКА — Ассистент менеджера по продажам</b>
+            <span>10/2021 – 04/2022</span>
+          </div>
+          <ul>
+            <li>Договорная документация, контроль обязательств и коммуникация с клиентами</li>
+            <li>Поддержка менеджеров, работа с базой и условиями поставок</li>
+            <li>Участие в подготовке и выигрыше 2 аукционов по 223-ФЗ</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <p style="margin:0;">One-page сайт для рекрутёров · © <span id="y"></span> Арина Филатова</p>
-</footer>
-```
+    <section class="section" id="education">
+      <h2>Образование и обучение</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>НИУ ВШЭ — бакалавр (2018–2022)</h3>
+          <p style="margin:0; color:var(--muted);">Управление бизнесом</p>
+        </div>
+        <div class="card">
+          <h3>Курсы</h3>
+          <ul>
+            <li>Skillbox: Управление проектами</li>
+            <li>Skillbox: Управление командами 2.0</li>
+            <li>Дополнительно: Data-аналитика (Python/SQL) — для работы с цифрами проектов</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="contact">
+      <h2>Контакты</h2>
+      <div class="card">
+        <div class="links" style="margin-top:0;">
+          <a class="btn primary" href="mailto:arina.filatova.2014@bk.ru">arina.filatova.2014@bk.ru</a>
+          <a class="btn" href="https://t.me/arina_filatova_07" target="_blank" rel="noopener">@arina_filatova_07</a>
+          <a class="btn secondary" href="https://nn.hh.ru/resume/7755862cff0d55146b0039ed1f50616a743972" target="_blank" rel="noopener">Резюме на hh.ru</a>
+        </div>
+        <p class="small" style="margin:12px 0 0;">Москва · готова к переезду · готова к командировкам</p>
+      </div>
+    </section>
+
+    <footer>
+      <p style="margin:0;">© <span id="y"></span> Арина Филатова</p>
+    </footer>
   </div>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
